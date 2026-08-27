@@ -24,3 +24,114 @@
   .li{margin-left:auto;margin-top:0}
 }
 @media(min-width:1001px){aside nav{display:flex}}
+
+/* ===== Responsive / readability refinement =====
+   Existing content and data intentionally unchanged. */
+html{scroll-behavior:smooth}
+body{font-size:14px;line-height:1.55}
+main{min-width:0}
+main section{min-width:0}
+h1{font-size:clamp(34px,4vw,58px)!important;line-height:1.05!important}
+h2{font-size:clamp(25px,2.7vw,38px)!important;line-height:1.1!important}
+h3{font-size:clamp(18px,2vw,26px)!important;line-height:1.2!important}
+p,.lead{font-size:clamp(13px,1.05vw,16px)!important;line-height:1.65!important}
+small{font-size:11px}
+label,.work-tag,.impact-label,.engine-title{font-size:11px!important}
+nav a{font-size:13px!important;padding:10px 12px!important;border-radius:9px}
+nav a:before{font-size:15px!important;margin-right:8px}
+aside{overflow:visible}
+.brand{font-size:18px!important}
+.brand small{font-size:10px!important}
+.li{font-size:12px!important}
+.kpi b{font-size:clamp(24px,2.3vw,34px)!important}
+.kpi span{font-size:11px!important}
+.campaign-row b{font-size:13px!important}
+.campaign-row small,.campaign-row span{font-size:10px!important}
+.campaign-row strong{font-size:18px!important}
+.insight{font-size:11px!important}
+.google-metrics b{font-size:18px!important}
+.google-metrics small{font-size:9px!important}
+.barline span{font-size:10px!important}
+.content-number b{font-size:52px!important}
+.content-number span{font-size:11px!important}
+.split b{font-size:20px!important}
+.split small{font-size:9px!important}
+.strategy-item b{font-size:12px!important}
+.strategy-item small{font-size:10px!important}
+.impact-row,.engine-line{font-size:10px!important}
+.source-note{font-size:10px!important}
+.work-points span{font-size:10px!important}
+.work-block-head small{font-size:10px!important}
+.creative-grid figcaption{font-size:11px!important}
+
+/* Stronger, less-minimal navigation */
+aside nav{gap:5px!important}
+aside nav a{display:flex!important;align-items:center!important;min-height:42px!important;background:#f4f9fc;border:1px solid #d8e8f1;color:#2f6684!important;font-weight:700!important;transition:.2s ease}
+aside nav a:hover,aside nav a.on{background:#e2f2fa!important;border-color:#9ccde5!important;color:#23678c!important;transform:translateX(2px)}
+.menu-toggle{width:44px!important;height:44px!important;border:1px solid #c7dfeb!important;background:#eef8fd!important;border-radius:12px!important;font-size:22px!important;font-weight:700}
+
+/* Better card readability */
+.card,.work-block,.work-feature,.strategy-card,.strategy-impact,.content-engine{box-shadow:0 10px 26px rgba(43,105,139,.08)}
+.work-copy{padding:12px 14px!important}
+.work-copy h3{font-size:22px!important}
+.work-copy p{font-size:13px!important}
+.strategy-card h3{font-size:14px!important}
+.strategy-icon{width:36px!important;height:36px!important;font-size:11px!important}
+
+/* Desktop */
+@media(min-width:1001px){
+  aside{position:sticky!important;top:18px!important;height:calc(100vh - 36px)!important}
+  main{max-width:1400px!important}
+}
+
+/* Tablet */
+@media(max-width:1000px){
+  body{display:block!important}
+  aside{position:sticky!important;top:0!important;z-index:1000!important;width:100%!important;border-right:0!important;border-bottom:1px solid #dbeaf2!important;border-radius:0 0 16px 16px!important}
+  aside .brand{white-space:nowrap}
+  main{width:100%!important;max-width:none!important;padding:28px 24px!important}
+  .menu-toggle{flex:0 0 auto}
+  .analytics-grid,.strategy-bottom{grid-template-columns:1fr!important}
+  .strategy-flow{grid-template-columns:repeat(2,1fr)!important}
+  .creative-grid{grid-template-columns:repeat(3,1fr)!important}
+  .carousel-gallery{grid-template-columns:repeat(3,1fr)!important}
+  .work-feature,.video-feature{grid-template-columns:1fr!important}
+}
+
+/* Phone */
+@media(max-width:650px){
+  body{font-size:14px!important}
+  aside{padding:9px 12px!important}
+  aside .brand{font-size:15px!important}
+  aside .brand small{font-size:9px!important}
+  aside .li{font-size:10px!important}
+  main{padding:22px 14px 40px!important}
+  main section{padding:20px 0!important}
+  header{gap:9px!important;margin-bottom:12px!important}
+  header>b{font-size:10px!important}
+  .lead{font-size:13px!important}
+  .kpi-strip{grid-template-columns:repeat(2,1fr)!important;gap:9px!important}
+  .kpi{padding:14px 11px!important}
+  .kpi b{font-size:25px!important}
+  .kpi span{font-size:10px!important}
+  .strategy-flow{grid-template-columns:1fr!important}
+  .creative-grid{grid-template-columns:repeat(2,1fr)!important}
+  .carousel-gallery{grid-template-columns:repeat(2,1fr)!important}
+  .creative-grid img{height:330px!important}
+  .carousel-gallery img{height:320px!important}
+  .work-feature{padding:12px!important}
+  .work-feature>img{max-height:none!important}
+  .video-preview img{height:270px!important}
+  .google-metrics{grid-template-columns:repeat(2,1fr)!important}
+  .real-donut{width:190px!important;height:190px!important}
+  .donut-center{top:122px!important}
+  .decision-band{flex-wrap:wrap!important;gap:9px!important;font-size:10px!important}
+  .split{grid-template-columns:1fr 1fr!important}
+}
+
+/* Very small phones */
+@media(max-width:390px){
+  .kpi-strip,.google-metrics,.split{grid-template-columns:1fr!important}
+  .creative-grid,.carousel-gallery{grid-template-columns:1fr!important}
+  .creative-grid img,.carousel-gallery img{height:auto!important;max-height:none!important}
+}
